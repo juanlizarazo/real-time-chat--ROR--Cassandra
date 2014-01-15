@@ -3,13 +3,6 @@ Real time chat - RoR
 
 Real time chat running on Ruby on Rails.
 
-Versions
-================
-
--MySQL 5.5
-- Ruby 2.0.0p247
-- Rails 4.0.0
-
 License
 ================
 
