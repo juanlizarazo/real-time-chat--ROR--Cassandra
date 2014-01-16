@@ -3,7 +3,7 @@
 
 development:
   adapter: mysql
-  database: am_chat_dev
+  database: am_chat
   username: root
   password: root
   host: localhost
