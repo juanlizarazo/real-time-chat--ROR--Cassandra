@@ -1,0 +1,101 @@
+/* Window chat */
+
+.chat-box {
+  width: 600px;
+  margin: 25px auto;
+}
+
+.chat-header {
+  background: green;
+  color: white;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+
+.chat-header h1 {
+  display: inline;
+  font-size: 1.1rem; 
+}
+.discussion {
+  background: #e5e5e5;
+  margin: 0;
+  padding: .8rem;
+  height: 400px;
+  overflow: auto;
+  
+}
+
+.discussion li {
+  padding: 0.5rem;
+  overflow: hidden;
+  display: flex;
+}
+
+.discussion .user-image {
+  width: 40px;
+  position: relative;
+}
+
+.discussion .user-image img {
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.text-box {
+  background: white;
+  height:40px;
+  border: solid #e5e5e5 .8rem;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  overflow:auto;
+  overflow-x: hidden;
+}
+
+.text-box p {
+  vertical-align: top;
+  text-align: left;
+}
+
+.other-user .messages {
+  background: #00FF00;
+  border-radius: 5px;
+}
+
+.user {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.user .messages {
+  order: 1;
+  border-radius: 5px;
+}
+
+.user .user-image {
+  order: 2;
+}
+
+.messages {
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.messages-main {
+  font-size: 0.8rem;
+  margin: 0 0 0.2rem 0;
+  font-family: arial;
+}
+
+.message-info {
+  font-size: 0.7rem;
+  color: #4A5C4A;
+  font-style: italic;
+  font-family: arial;
+}
