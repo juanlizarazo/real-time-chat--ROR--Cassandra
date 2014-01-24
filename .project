@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>am_chat</name>
+=======
+	<name>rails-chat</name>
+>>>>>>> 7ac2391c1e0e3be85e9c7bb738a3c8a882473169
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
+<<<<<<< HEAD
 	</buildSpec>
 	<natures>
 		<nature>com.aptana.projects.webnature</nature>
 		<nature>org.radrails.rails.core.railsnature</nature>
+=======
+		<buildCommand>
+			<name>com.aptana.ide.core.unifiedBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.aptana.ruby.core.rubynature</nature>
+>>>>>>> 7ac2391c1e0e3be85e9c7bb738a3c8a882473169
 	</natures>
 </projectDescription>
