@@ -111,3 +111,6 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2014-01-15 23:19:53
+
+INSERT INTO `am_chat_dev`.`users` (`user_name`, `password`, `first_name`, `last_name`) VALUES ('Allenardo', 'root', 'Devan', 'Allen');
+INSERT INTO `am_chat_dev`.`users` (`user_name`, `password`, `first_name`, `last_name`) VALUES ('Juan', 'root', 'Juan', 'Lizarazo');
