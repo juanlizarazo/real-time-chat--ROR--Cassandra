@@ -1,0 +1,52 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.login-box {
+  width:300px;
+  margin: 25px auto;
+}
+.login-header {
+  background: green;
+  color: white;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+.login-header h1 {
+  display: inline;
+  font-size: 1.2rem;
+}
+.selection-box {
+  background: #e5e5e5;
+  margin: 0;
+  padding: .6rem;
+  height: 200px;
+  overflow: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  list-style-type: none;
+}
+.selection-box li {
+  padding: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  border-radius: 5px;
+  border: solid 3px #e5e5e5;
+}
+.selection-box .user-image {
+  width: 60px;
+  position: relative;
+  padding:.5rem;
+}
+.selection-box .user-image img{
+  width:100%;
+  display: block;
+  border-radius: 30px;
+}
+.user-name{
+  padding: .3rem;
+  font-family: arial black;
+}
