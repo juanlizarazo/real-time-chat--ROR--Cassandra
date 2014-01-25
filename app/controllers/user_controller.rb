@@ -1,4 +1,4 @@
 class UserController < ApplicationController
-  def open
+  def index
   end
 end
