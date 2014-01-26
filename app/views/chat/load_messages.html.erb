@@ -1,0 +1,11 @@
+<% @messages.each do |message| %>
+  <li class="<%= (message.sent_by == @logged_in_user) ? 'user' : 'other-user' %>">
+    <div class="user-image">
+      <%= image_tag("default-profile-pic.png") %>
+    </div>
+    <div class="messages">
+      <p class="messages-main"><%= message.message %></p>
+      <p class="message-info">Sent by <%= message.sent_by %> at <%= message.date_sent %></p>
+    </div>
+  </li>
+<% end %>
