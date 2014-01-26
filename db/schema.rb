@@ -14,11 +14,11 @@
 ActiveRecord::Schema.define(version: 0) do
 
   create_table "messages", force: true do |t|
-    t.string   "message",   limit: 500,             null: false
-    t.integer  "sent_by",                           null: false
-    t.integer  "sent_to",                           null: false
-    t.datetime "date_sent",                         null: false
-    t.integer  "deleted",               default: 0, null: false
+    t.string   "message",    limit: 500,             null: false
+    t.integer  "sent_by",                            null: false
+    t.integer  "sent_to",                            null: false
+    t.datetime "created_at",                         null: false
+    t.integer  "deleted",                default: 0, null: false
   end
 
   add_index "messages", ["sent_by"], name: "fk_messages_user_id_idx", using: :btree
@@ -31,9 +31,10 @@ ActiveRecord::Schema.define(version: 0) do
     t.string   "last_name",      limit: 20,             null: false
     t.integer  "user_status",               default: 0, null: false
     t.integer  "disabled",                  default: 0, null: false
-    t.datetime "created_date",                          null: false
+    t.datetime "created_at",                            null: false
     t.datetime "last_login",                            null: false
     t.integer  "login_attempts",            default: 0, null: false
+    t.string   "profile_pic",    limit: 24
   end
 
 end
