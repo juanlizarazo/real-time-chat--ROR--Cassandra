@@ -9,44 +9,17 @@
 <section class="chat-box">
 
   <header class="chat-header">
-      <h1>Ruby On Rails Chat Box</h1>
+      <h1>Conversation room</h1>
   </header>
   
-  <ol class="discussion">
-    <li class="other-user">
-      <div class="user-image">
-        <%= image_tag("default-profile-pic.png") %>
-      </div>
-      <div class="messages">
-        <p class="messages-main">sample message from 'other' user</p>
-        <p class="message-info">Sent by (name of user) at (time)</p>
-      </div>
-    </li>
-    
-    <li class="user">
-      <div class="user-image">
-        <%= image_tag("default-profile-pic.png") %>
-      </div>
-      <div class="messages">
-        <p class="messages-main">sample message from 'self' user</p>
-        <p class="message-info">Sent by (name of user) at (time)</p>
-      </div>
-    </li>
-    
-    <li class="other-user">
-      <div class="user-image">
-        <%= image_tag("default-profile-pic.png") %>
-      </div>
-      
-      <div class="messages">
-        <p class="messages-main">Second sample message from the 'other' user</p>
-        <p class="message-info">Sent by (name of user) at (time)</p>
-      </div>
-    </li>  
+  <ol class="discussion" id="discussion">
+
   </ol>
   <div class="text-box">User Enters Message/Text here!
     <p></p>
   </div>
 </section>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<%= javascript_include_tag "chat" %>
 </body>
 </html>
