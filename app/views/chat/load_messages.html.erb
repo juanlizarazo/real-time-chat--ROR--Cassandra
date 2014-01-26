@@ -5,7 +5,13 @@
     </div>
     <div class="messages">
       <p class="messages-main"><%= message.message %></p>
-      <p class="message-info">Sent by <%= message.sent_by %> at <%= message.date_sent %></p>
+      <% 
+      time = Time.at (message.date_sent)
+      sent_at = time.strftime("%B %d, %Y at %I:%M:%S %p")
+      %>
+      <p class="message-info">Sent by <%= message.user.user_name %> on <%= sent_at %></p>
+      
+      
     </div>
   </li>
 <% end %>
