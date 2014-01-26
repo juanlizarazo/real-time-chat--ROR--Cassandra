@@ -46,7 +46,7 @@
   border-radius: 30px;
 }
 
-.text-box {
+.message-box {
   background: white;
   height:40px;
   border: solid #e5e5e5 .8rem;
@@ -54,6 +54,8 @@
   border-bottom-right-radius:5px;
   overflow:auto;
   overflow-x: hidden;
+  width: 566px;
+  padding-left: 10px;
 }
 
 .text-box p {

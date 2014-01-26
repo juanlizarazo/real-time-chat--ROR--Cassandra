@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `am_chat_dev` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `am_chat_dev`;
--- MySQL dump 10.13  Distrib 5.5.34, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (x86_64)
 --
--- Host: 127.0.0.1    Database: am_chat
+-- Host: 127.0.0.1    Database: am_chat_dev
 -- ------------------------------------------------------
--- Server version	5.5.34-0ubuntu0.12.04.1
+-- Server version	5.5.35-0ubuntu0.12.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -29,14 +29,14 @@ CREATE TABLE `messages` (
   `message` varchar(500) NOT NULL,
   `sent_by` int(2) NOT NULL,
   `sent_to` int(2) NOT NULL,
-  `date_sent` datetime NOT NULL,
+  `created_at` datetime NOT NULL,
   `deleted` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_messages_user_id_idx` (`sent_by`),
   KEY `fk_messages_sent_to_idx` (`sent_to`),
   CONSTRAINT `fk_messages_sent_by` FOREIGN KEY (`sent_by`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_messages_sent_to` FOREIGN KEY (`sent_to`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,6 +45,7 @@ CREATE TABLE `messages` (
 
 LOCK TABLES `messages` WRITE;
 /*!40000 ALTER TABLE `messages` DISABLE KEYS */;
+INSERT INTO `messages` VALUES (1,'Hello Juan',1,2,'2014-01-24 03:49:00',0),(2,'Howdy!',2,1,'2014-01-24 03:49:25',0),(3,'How are ya!',1,2,'2014-01-24 04:01:00',0);
 /*!40000 ALTER TABLE `messages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,11 +86,12 @@ CREATE TABLE `users` (
   `last_name` varchar(20) NOT NULL,
   `user_status` int(1) NOT NULL DEFAULT '0',
   `disabled` int(1) NOT NULL DEFAULT '0',
-  `created_date` datetime NOT NULL,
+  `created_at` datetime NOT NULL,
   `last_login` datetime NOT NULL,
   `login_attempts` int(1) NOT NULL DEFAULT '0',
+  `profile_pic` varchar(24) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,8 +100,17 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Allenardo','root','Devan','Allen',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'allenardo.jpeg'),(2,'Juan','root','Juan','Lizarazo',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'juan.jpeg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'am_chat_dev'
+--
+
+--
+-- Dumping routines for database 'am_chat_dev'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -110,12 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-01-15 23:19:53
-
-INSERT INTO `am_chat_dev`.`users` (`user_name`, `password`, `first_name`, `last_name`) VALUES ('Allenardo', 'root', 'Devan', 'Allen');
-INSERT INTO `am_chat_dev`.`users` (`user_name`, `password`, `first_name`, `last_name`) VALUES ('Juan', 'root', 'Juan', 'Lizarazo');
-ALTER TABLE `am_chat_dev`.`users` 
-ADD COLUMN `profile_pic` VARCHAR(24) NULL AFTER `login_attempts`;
-UPDATE `am_chat_dev`.`users` SET `profile_pic`='allenardo.jpeg' WHERE `id`='1';
-UPDATE `am_chat_dev`.`users` SET `profile_pic`='juan.jpeg' WHERE `id`='2';
-
+-- Dump completed on 2014-01-26 16:27:50
