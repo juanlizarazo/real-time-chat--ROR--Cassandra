@@ -15,11 +15,12 @@
   <ol class="discussion" id="discussion">
 
   </ol>
-  <div class="text-box">User Enters Message/Text here!
-    <p></p>
-  </div>
+  <input class="message-box" id="message-box" placeholder="Write your message...">
 </section>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+  var authenticity_token = '<%= form_authenticity_token %>';
+</script>
 <%= javascript_include_tag "chat" %>
 </body>
 </html>

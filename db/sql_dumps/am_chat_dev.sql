@@ -119,3 +119,9 @@ ADD COLUMN `profile_pic` VARCHAR(24) NULL AFTER `login_attempts`;
 UPDATE `am_chat_dev`.`users` SET `profile_pic`='allenardo.jpeg' WHERE `id`='1';
 UPDATE `am_chat_dev`.`users` SET `profile_pic`='juan.jpeg' WHERE `id`='2';
 
+ALTER TABLE `am_chat_dev`.`users` 
+CHANGE COLUMN `created_date` `created_at` DATETIME NOT NULL ;
+
+ALTER TABLE `am_chat_dev`.`messages` 
+CHANGE COLUMN `date_sent` `created_at` DATETIME NOT NULL ;
+
