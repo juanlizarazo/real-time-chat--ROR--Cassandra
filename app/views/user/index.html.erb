@@ -1,29 +1,24 @@
 <!DOCTYPE html>
+
 <html>
+<head>
+  <%= stylesheet_link_tag 'user' %>
+</head>
+
 <body>
 <section class="login-box">
- <header class="login-header">
-   <h1>Chat Login</h1>
- </header>
+  <header class="login-header">
+    <h1>Chat Login</h1>
+  </header>
   <ol class="selection-box">
-    <li>
-      <div class="user-image">
-        <%= image_tag("default-profile-pic.png") %>
-      </div> 
-      <p class="user-name">User Name</p>
-    </li>
-    <li>
-      <div class="user-image">
-        <%= image_tag("default-profile-pic.png") %>
-      </div> 
-      <p class="user-name">User Name</p>
-    </li>
-        <li>
-      <div class="user-image">
-        <%= image_tag("default-profile-pic.png") %>
-      </div> 
-      <p class="user-name">User Name</p>
-    </li>
+    <% @users.each do |user| %>
+      <li>
+        <div class="user-image">
+          <%= image_tag("default-profile-pic.png") %>
+        </div> 
+        <p class="user-name"><%= user.user_name %></p>
+      </li>
+    <% end %>
   </ol>
 </section>
 </body>
