@@ -28,7 +28,10 @@ function send_message() {
   var message = $('#message-box').val();
   
   $.post( 'send_message', {sent_to: sent_to, message: message, authenticity_token: authenticity_token} ,function( response ) {
-    load_messages();
+    if (response) {
+      load_messages();
+      $('#message-box').val('');
+    }
   });
   
 }
