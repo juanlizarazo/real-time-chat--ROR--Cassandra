@@ -3,6 +3,16 @@ Real time chat - RoR
 
 Real time chat running on Ruby on Rails.
 
+This chat uses:
+
+- MySQL
+- Rails ActiveRecord
+- Javascript, Jquery and ajax calls
+- Ruby 2.1
+- Rails 4
+- css3
+- html5
+
 License
 ================
 
