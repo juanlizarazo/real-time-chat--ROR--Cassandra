@@ -16,7 +16,7 @@ $(function() {
 
 function load_messages() {
   
-  $('#discussion').load('/chat/load_messages', function(){
+  $('#discussion').load( '/chat/load_messages', function() {
     $(this).scrollTop( $(this)[0].scrollHeight );
   });
   
@@ -27,7 +27,7 @@ function send_message() {
   var sent_to = 1; // Temp value, it will be changed when session is ready
   var message = $('#message-box').val();
   
-  $.post( 'send_message', {sent_to: sent_to, message: message, authenticity_token: authenticity_token} ,function( response ) {
+  $.post( '/chat/send_message', {sent_to: sent_to, message: message, authenticity_token: authenticity_token} ,function( response ) {
     if (response) {
       load_messages();
       $('#message-box').val('');
