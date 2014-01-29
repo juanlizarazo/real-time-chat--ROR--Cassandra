@@ -21,7 +21,6 @@ function load_messages() {
 }
 
 function send_message() {
-  
   var sent_to = 1; // Temp value, it will be changed when session is ready
   var message = $('#message-box').val();
   
@@ -31,5 +30,4 @@ function send_message() {
       $('#message-box').val('');
     }
   });
-  
 }
