@@ -1,7 +1,7 @@
 $(function() {
   
-  load_messages();
-
+  setInterval(function(){ load_messages(); }, 1000 );
+  
   $('#message-box').bind('send-message',function(e){
      send_message();
   });
@@ -15,15 +15,12 @@ $(function() {
 });
 
 function load_messages() {
-  
   $('#discussion').load( '/chat/load_messages', function() {
     $(this).scrollTop( $(this)[0].scrollHeight );
   });
-  
 }
 
 function send_message() {
-  
   var sent_to = 1; // Temp value, it will be changed when session is ready
   var message = $('#message-box').val();
   
@@ -33,5 +30,4 @@ function send_message() {
       $('#message-box').val('');
     }
   });
-  
 }
