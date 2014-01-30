@@ -12,14 +12,18 @@
   </header>
   <ol class="selection-box">
     <% @users.each do |user| %>
-      <li>
-        <div class="user-image">
-          <%= image_tag ("profile_pics/" + user.profile_pic) %>
-        </div> 
-        <p class="user-name"><%= user.user_name %></p>
-      </li>
+      
+      <%= link_to "user/logged_in_user_id", :id => '#{user.id}' do%> 
+        <li>
+          <div class="user-image">
+            <%= image_tag ("profile_pics/" + user.profile_pic) %>
+          </div> 
+          <p class="user-name"><%= user.user_name %></p>
+        </li>  
+      <% end %>
     <% end %>
   </ol>
+  <%= session[:logged_in_user_id] %>
 </section>
 </body>
 </html>
