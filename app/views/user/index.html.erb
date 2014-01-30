@@ -12,8 +12,7 @@
   </header>
   <ol class="selection-box">
     <% @users.each do |user| %>
-      
-      <%= link_to "user/logged_in_user_id", :id => '#{user.id}' do%> 
+      <%= link_to "user/login/#{user.id}" do%> 
         <li>
           <div class="user-image">
             <%= image_tag ("profile_pics/" + user.profile_pic) %>
