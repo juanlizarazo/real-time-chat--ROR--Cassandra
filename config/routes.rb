@@ -10,4 +10,7 @@ AmChat::Application.routes.draw do
   # send message action
   post 'chat/send_message'
   
+  # sets session variable for the user's id
+  get 'user/login/:id' => 'user#login'
+  
 end
