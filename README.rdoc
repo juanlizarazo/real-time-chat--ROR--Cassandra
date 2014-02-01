@@ -5,8 +5,7 @@ Real time chat running on Ruby on Rails.
 
 This chat uses:
 
-- MySQL
-- Rails ActiveRecord
+- MySQL and ActiveRecord
 - Javascript, Jquery and ajax calls
 - Ruby 2.1
 - Rails 4
