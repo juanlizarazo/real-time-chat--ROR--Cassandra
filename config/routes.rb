@@ -2,7 +2,7 @@ AmChat::Application.routes.draw do
   
   # Render views
   get 'chat/' => 'chat#index'
-  get 'user/' => 'user#index'
+  root to: 'user#index'
   
   # message history partial
   get 'chat/load_messages'
@@ -10,7 +10,7 @@ AmChat::Application.routes.draw do
   # send message action
   post 'chat/send_message'
   
-  # sets session variable for the user's id
+  # Pass id to user controller
   get 'user/login/:id' => 'user#login'
   
 end
