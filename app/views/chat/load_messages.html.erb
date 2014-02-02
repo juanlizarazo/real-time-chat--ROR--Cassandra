@@ -1,7 +1,7 @@
 <% @messages.each do |message| %>
   <li class="<%= (message.sent_by == @logged_in_user) ? 'user' : 'other-user' %>">
     <div class="user-image">
-      <%= image_tag("default-profile-pic.png") %>
+      <%= render_profile_pic(message.user) %>
     </div>
     <div class="messages">
       <p class="messages-main"><%= message.message %></p>
