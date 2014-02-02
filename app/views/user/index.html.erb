@@ -2,13 +2,15 @@
 
 <html>
 <head>
-  <%= stylesheet_link_tag 'user' %>
+  <title>Real time chat with RoR and MySQL </title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag 'chat' %>
 </head>
 
 <body>
 <section class="login-box">
   <header class="login-header">
-    <h1>Chat Login</h1>
+    <h1>Chat user selection</h1>
   </header>
   <ol class="selection-box">
     <% @users.each do |user| %>

@@ -6,7 +6,7 @@
 }
 
 .chat-header {
-  background: green;
+  background: #435F9C;
   color: white;
   padding: 0.5rem;
   position: relative;
@@ -20,6 +20,7 @@
   display: inline;
   font-size: 1.1rem; 
 }
+
 .discussion {
   background: #e5e5e5;
   margin: 0;
@@ -64,7 +65,7 @@
 }
 
 .other-user .messages {
-  background: #00FF00;
+  background: #BECBE7;
   border-radius: 5px;
 }
 
@@ -101,3 +102,78 @@
   font-style: italic;
   font-family: arial;
 }
+
+/* Login view */
+
+.login-box {
+  width:300px;
+  margin: 25px auto;
+}
+
+.login-header {
+  background: #435F9C;
+  color: white;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+
+.login-header h1 {
+  display: inline;
+  font-size: 1.2rem;
+}
+
+.selection-box {
+  background: #e5e5e5;
+  margin: 0;
+  padding: .6rem;
+  height: 200px;
+  overflow: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  list-style-type: none;
+}
+
+.selection-box li {
+  padding: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  border-radius: 5px;
+  border: solid 3px #e5e5e5;
+}
+
+.selection-box .user-image {
+  width: 60px;
+  position: relative;
+  padding:.5rem;
+}
+
+.selection-box .user-image img {
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+  margin-top: -8px;
+}
+
+.selection-box a {
+  text-decoration: none;
+  color: #435F9C;
+}
+
+.selection-box a:hover {
+  font-weight: bold;
+}
+
+.selection-box a:hover img {
+  width: 104%;
+}
+
+.user-name {
+  padding: .3rem;
+  font-family: arial;
+}
+
+
