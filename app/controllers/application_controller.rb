@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   helper_method :render_profile_pic
   
   def render_profile_pic (user)
-    image_tag("profile_pics/" + user.profile_pic)
+    ActionController::Base.helpers.image_tag("profile_pics/" + user.profile_pic)
   end
 end
