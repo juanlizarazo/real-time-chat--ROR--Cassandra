@@ -107,6 +107,8 @@ div.copyright {
 }
 
 .messages {
+  max-width: 466px;
+  word-wrap: break-word;
   background: white;
   padding: 10px;
   border-radius: 2px;
