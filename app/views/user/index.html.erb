@@ -17,7 +17,7 @@
       <%= link_to "user/login/#{user.id}" do %> 
         <li>
           <div class="user-image">
-            <%= image_tag (load_profile_pic(user)) %>
+            <%= (render_profile_pic(user)) %>
           </div> 
           <p class="user-name"><%= user.user_name %></p>
         </li>  
