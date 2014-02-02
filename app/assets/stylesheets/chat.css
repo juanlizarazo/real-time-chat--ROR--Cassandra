@@ -2,6 +2,12 @@ body {
   font-family: helvetica, arial;
 }
 
+div.copyright {
+  float: right;
+  color: #999999;
+  font-size: small;
+}
+
 /* Window chat */
 
 .chat-box {
