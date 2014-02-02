@@ -1,3 +1,7 @@
+body {
+  font-family: helvetica, arial;
+}
+
 /* Window chat */
 
 .chat-box {
@@ -19,6 +23,19 @@
 .chat-header h1 {
   display: inline;
   font-size: 1.1rem; 
+}
+
+.chat-header div {
+  text-align: right;
+  font-size: 14px;
+}
+
+.chat-header div > a {
+  cursor: pointer;
+}
+
+.chat-header div > a:hover{
+  text-decoration: underline;
 }
 
 .discussion {
@@ -93,14 +110,12 @@
 .messages-main {
   font-size: 0.8rem;
   margin: 0 0 0.2rem 0;
-  font-family: arial;
 }
 
 .message-info {
   font-size: 0.7rem;
   color: #4A5C4A;
   font-style: italic;
-  font-family: arial;
 }
 
 /* Login view */
@@ -173,7 +188,4 @@
 
 .user-name {
   padding: .3rem;
-  font-family: arial;
 }
-
-

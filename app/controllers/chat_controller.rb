@@ -5,12 +5,23 @@ class ChatController < ApplicationController
   end
   
   def load_messages
-    @messages = Message.find(:all, :order=>'created_at DESC', :limit => 5, :joins => :user)
+    @messages = Message.find(:all, :conditions => { :deleted => 0 }, :order=>'created_at DESC', :limit => 5, :joins => :user)
     @messages.reverse!
     
     @logged_in_user = session[:user_id].to_i
     
     render :layout => false
+  end
+  
+  def clear_messages
+    render :nothing => true
+   
+    @messages = Message.find(:all, :conditions => { :deleted => 0 })
+    
+    @messages.each do |message| 
+      message.deleted = 1
+      message.save
+    end
   end
   
   def send_message

@@ -1,6 +1,6 @@
 $(function() {
   
-  setInterval(function(){ load_messages(); }, 1000 );
+  setInterval(function(){ load_messages(); }, 1800 );
   
   $('#message-box').bind('send-message',function(e){
      send_message();
@@ -17,6 +17,12 @@ $(function() {
 function load_messages() {
   $('#discussion').load( '/chat/load_messages', function() {
     $(this).scrollTop( $(this)[0].scrollHeight );
+  });
+}
+
+function clear_chat() {
+  $.post( '/chat/clear_messages', {authenticity_token: authenticity_token}, function() {
+    load_messages(); 
   });
 }
 
