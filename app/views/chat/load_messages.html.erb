@@ -1,5 +1,4 @@
 <% @messages.each do |message| %>
-  <% if (message.message.length != 0) %>
     <li class="<%= (message.sent_by == @logged_in_user) ? 'user' : 'other-user' %>">
       <div class="user-image">
         <%= render_profile_pic(message.user) %>
@@ -13,5 +12,4 @@
         <p class="message-info">Sent by <%= message.user.user_name %> on <%= sent_at %></p>
       </div>
     </li>
-   <% end%>
 <% end %>
