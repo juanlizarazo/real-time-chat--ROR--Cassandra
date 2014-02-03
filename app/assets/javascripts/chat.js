@@ -1,6 +1,6 @@
 $(function() {
   
-  setInterval(function(){ load_messages(); }, 1000 );
+	setTimeout(function(){load_messages(); }, 1);
   
   $('#message-box').bind('send-message',function(e){
      send_message();
