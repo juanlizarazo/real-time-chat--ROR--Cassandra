@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "am_chat.users", "name" : "_id_" }, { "v" : 1, "key" : { "user_name" : 1 }, "unique" : true, "ns" : "am_chat.users", "name" : "user_name_1" } ] }
