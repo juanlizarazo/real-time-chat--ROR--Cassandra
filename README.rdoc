@@ -5,7 +5,7 @@ Real time chat running on Ruby on Rails.
 
 This chat uses:
 
-- MySQL and ActiveRecord
+- Cassandra (NoSQL Database)
 - Javascript, Jquery and ajax calls
 - Ruby 2.1
 - Rails 4
@@ -15,4 +15,4 @@ This chat uses:
 License
 ================
 
-Copyright (c) 2014 Juan Lizarazo and Devan Allen
+Copyright (c) 2014 Juan Lizarazo
