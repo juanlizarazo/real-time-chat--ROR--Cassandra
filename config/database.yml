@@ -1,23 +1,22 @@
 # DB Config file
-# MySQL
 
 development:
-  adapter: mysql
+  adapter: 
   database: am_chat_dev
-  username: root
-  password: root
+  username: 
+  password: 
   host: localhost
 
 test:
-  adapter: mysql
+  adapter: cequel
   database: am_chat_test
   username: root
   password: 
   host: localhost
 
 production:
-  adapter: mysql
+  adapter: 
   database: am_chat_live
-  username: root
+  username: 
   password: 
   host: localhost
