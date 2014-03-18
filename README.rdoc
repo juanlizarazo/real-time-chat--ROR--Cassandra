@@ -15,4 +15,4 @@ This chat uses:
 License
 ================
 
-Copyright (c) 2014 Juan Lizarazo
+Copyright (c) 2014 Juan Lizarazo & Devan Allen
