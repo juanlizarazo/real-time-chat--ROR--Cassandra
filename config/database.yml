@@ -1,22 +1,22 @@
 # DB Config file
 
 development:
-  adapter: 
+  adapter: CassandraObject
   database: am_chat_dev
-  username: 
-  password: 
+  username: root 
+  password: root
   host: localhost
 
 test:
-  adapter: cequel
+  adapter: CassandraObject
   database: am_chat_test
   username: root
-  password: 
+  password: root
   host: localhost
 
 production:
-  adapter: 
+  adapter: CassandraObject
   database: am_chat_live
-  username: 
-  password: 
+  username: root
+  password: root
   host: localhost
