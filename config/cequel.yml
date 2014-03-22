@@ -1,0 +1,19 @@
+development:
+  host: '127.0.0.1'
+  port: 9042
+  keyspace: am_chat_development
+
+test:
+  host: '127.0.0.1'
+  port: 9042
+  keyspace: am_chat_test
+
+production:
+  hosts:
+    - 'cass1.am_chat.biz'
+    - 'cass2.am_chat.biz'
+    - 'cass3.am_chat.biz'
+  port: 9042
+  keyspace: am_chat_production
+  username: 'myappuser'
+  password: 'password1'
