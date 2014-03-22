@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+# ORM like system for Cassandra
+gem 'cequel'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
