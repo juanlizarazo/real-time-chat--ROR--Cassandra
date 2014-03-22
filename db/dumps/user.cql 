@@ -1,0 +1,7 @@
+USE am_chat_development;
+CREATE TABLE users (
+    key varchar PRIMARY KEY, 
+    username varchar,
+    first_name varchar,
+    last_name varchar,
+    created_at timestamp);
