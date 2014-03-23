@@ -4,7 +4,8 @@ CREATE TABLE users (
     username varchar,
     first_name varchar,
     last_name varchar,
-    created_at timestamp
+    created_at timestamp,
+    profile_pic varchar
 );
 
 INSERT INTO users 
@@ -13,14 +14,16 @@ INSERT INTO users
 	username, 
 	first_name, 
 	last_name, 
-	created_at
+	created_at,
+	profile_pic
 ) VALUES 
 (
 	now(),
 	'Juan',
 	'Juan',
 	'Lizarazo',
-	1363561897
+	1363561897,
+	'juan.jpeg'
 );
 
 INSERT INTO users 
@@ -29,12 +32,14 @@ INSERT INTO users
 	username, 
 	first_name, 
 	last_name, 
-	created_at
+	created_at,
+	profile_pic
 ) VALUES 
 (
 	now(),
 	'Allenardo',
 	'Devan',
 	'Allen',
-	1395040258
+	1395040258,
+	'allenardo.jpeg'
 );
