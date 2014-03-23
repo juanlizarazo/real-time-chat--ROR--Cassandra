@@ -5,7 +5,8 @@ Real time chat running on Ruby on Rails.
 
 This chat uses:
 
-- Cassandra (NoSQL Database)
+- Cassandra 2 (NoSQL Database)
+- Cequel ORM framework for Cassandra
 - Javascript, Jquery and ajax calls
 - Ruby 2.1
 - Rails 4
