@@ -14,12 +14,12 @@
   </header>
   <ol class="selection-box">
     <% @users.each do |user| %>
-      <%= link_to "user/login/#{user.id}" do %> 
+      <%= link_to "user/login/#{user.user_id}" do %> 
         <li>
           <div class="user-image">
             <%= render_profile_pic(user) %>
           </div> 
-          <p class="user-name"><%= user.user_name %></p>
+          <p class="user-name"><%= user.username %></p>
         </li>  
       <% end %>
     <% end %>
