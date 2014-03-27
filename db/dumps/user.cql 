@@ -2,6 +2,17 @@
 
 /* juanl user */
 
+USE am_chat_development;
+
+CREATE TABLE users (
+    user_id timeuuid PRIMARY KEY, 
+    username varchar,
+    first_name varchar,
+    last_name varchar,
+    created_at timestamp,
+    profile_pic varchar
+);
+
 INSERT INTO users 
 (
 	user_id, 
@@ -10,7 +21,6 @@ INSERT INTO users
 	last_name,
 	profile_pic,
 	username	
-	
 ) VALUES 
 (
 	69566a50-b30b-11e3-b479-e76149b7842c,
@@ -31,7 +41,6 @@ INSERT INTO users
 	last_name,
 	profile_pic,
 	username
-	
 ) VALUES 
 (
 	69570690-b30b-11e3-b479-e76149b7842c,
