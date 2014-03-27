@@ -1,40 +1,43 @@
-USE am_chat_development;
-CREATE TABLE users (
-    key timeuuid PRIMARY KEY, 
-    username varchar,
-    first_name varchar,
-    last_name varchar,
-    created_at timestamp
-);
+/* DATA DUMP */
+
+/* juanl user */
 
 INSERT INTO users 
 (
-	key, 
-	username, 
+	user_id, 
+	created_at,
 	first_name, 
-	last_name, 
-	created_at
+	last_name,
+	profile_pic,
+	username	
+	
 ) VALUES 
 (
-	now(),
-	'Juan',
+	69566a50-b30b-11e3-b479-e76149b7842c,
+	1395886100000,
 	'Juan',
 	'Lizarazo',
-	1363561897
+	'juan.jpg',
+	'juanl'
 );
+
+/* Allenardo user */
 
 INSERT INTO users 
 (
-	key, 
-	username, 
+	user_id, 
+	created_at,
 	first_name, 
-	last_name, 
-	created_at
+	last_name,
+	profile_pic,
+	username
+	
 ) VALUES 
 (
-	now(),
-	'Allenardo',
+	69570690-b30b-11e3-b479-e76149b7842c,
+	1395886152125,
 	'Devan',
 	'Allen',
-	1395040258
+	'allenardo.jpg',
+	'Allenardo'
 );
