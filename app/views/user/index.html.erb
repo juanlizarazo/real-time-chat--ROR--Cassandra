@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>Real time chat with RoR and MySQL </title>
+  <title>Real time chat with RoR and Cassandra </title>
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag 'chat' %>
 </head>
@@ -14,7 +14,8 @@
   </header>
   <ol class="selection-box">
     <% @users.each do |user| %>
-      <%= link_to "user/login/#{user.user_id}" do %> 
+      <% user_url_encoded = user.user_id.to_s %>
+      <%= link_to "user/login/#{user_url_encoded}" do %> 
         <li>
           <div class="user-image">
             <%= render_profile_pic(user) %>
