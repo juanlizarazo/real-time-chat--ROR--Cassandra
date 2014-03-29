@@ -66,7 +66,7 @@ INSERT INTO messages
 	0,
 	'how are ya?!',
 	69570690-b30b-11e3-b479-e76149b7842c,
-	669566a50-b30b-11e3-b479-e76149b7842c
+	69566a50-b30b-11e3-b479-e76149b7842c
 );
 
 INSERT INTO messages
